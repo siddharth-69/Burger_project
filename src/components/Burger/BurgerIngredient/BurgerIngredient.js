@@ -1,12 +1,12 @@
 import React from 'react'
-import classes from './BurgerIngredient.css'
+import classes from './BurgerIngredient.module.css'
 
 function BurgerIngredient(props) {
-    let ingredient = 5;
+    let ingredient = null;
 
     switch (props.type) {
         case ('bread-bottom'):
-            ingredient = <div className={classes.BreadBottom}>aa</div>;
+            ingredient = <div className={classes.BreadBottom}></div>;
             break;
         case ('bread-top'):
             ingredient = (
@@ -29,7 +29,7 @@ function BurgerIngredient(props) {
             ingredient = <div className={classes.Salad}></div>;
             break;
         default:
-            ingredient = 90;
+            ingredient=null;
     }
 
     return (ingredient);
